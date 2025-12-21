@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const Screen5_PhotoGallery = ({ onNext, onPrev }) => {
-  const photoCount = 10;
+  const photoCount = 12;
   const photos = Array.from({ length: photoCount }, (_, i) => ({
     id: i,
     src: `/photos/photo${i + 1}.jpg`,
