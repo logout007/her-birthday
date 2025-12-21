@@ -1,0 +1,52 @@
+/* Candle Flame */
+.flame {
+  width: 16px;
+  height: 24px;
+  position: relative;
+  animation: flicker 0.4s infinite alternate;
+}
+
+.flame-inner {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #ff6b00, #ffaa00, #ffff00);
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(45deg);
+  box-shadow: 0 0 15px rgba(255, 150, 0, 0.8);
+  animation: flame-rise 1s ease-in-out infinite;
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes flame-rise {
+  0%, 100% {
+    transform: rotate(45deg) scaleY(1);
+  }
+  50% {
+    transform: rotate(45deg) scaleY(1.1);
+  }
+}
+
+/* Cake Cut Animation */
+.cake-cut {
+  animation: cakeCut 0.8s ease-out;
+}
+
+@keyframes cakeCut {
+  0% {
+    filter: brightness(1) drop-shadow(0 0 10px rgba(255, 255, 255, 0));
+  }
+  50% {
+    filter: brightness(1.2) drop-shadow(0 0 20px rgba(255, 215, 0, 0.8));
+  }
+  100% {
+    filter: brightness(1) drop-shadow(0 0 5px rgba(255, 215, 0, 0.4));
+  }
+}
