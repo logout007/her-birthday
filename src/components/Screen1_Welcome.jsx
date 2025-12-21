@@ -9,7 +9,7 @@ const Screen1_Welcome = ({ onNext }) => {
       <div className="text-center z-10 space-y-8 animate-fade-in max-w-full">
         {/* Main Heading */}
         <div className="mb-6 sm:mb-8">
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white mb-3 sm:mb-4"
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-[#dd1616] mb-3 sm:mb-4"
               style={{
                 textShadow: '0 6px 20px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.3)'
               }}>
@@ -19,7 +19,7 @@ const Screen1_Welcome = ({ onNext }) => {
              style={{
                textShadow: '0 4px 15px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.3)'
              }}>
-            Pinaki 🎉
+            Penguuu 🎉
           </p>
         </div>
 
@@ -33,7 +33,7 @@ const Screen1_Welcome = ({ onNext }) => {
         </div>
 
         {/* Subtext */}
-        <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white mb-8 sm:mb-16 font-light"
+        <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-[#e32c2c] mb-8 sm:mb-16 font-light"
            style={{
              textShadow: '0 4px 12px rgba(0, 0, 0, 0.3)'
            }}>

@@ -8,7 +8,7 @@ const Screen6_Finale = ({ onPrev }) => {
 
       <div className="text-center z-10 max-w-2xl space-y-4 sm:space-y-6 md:space-y-8 animate-fade-in">
         {/* Main Message */}
-        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white"
+        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-[#dd1616]"
             style={{
               textShadow: '0 6px 20px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.3)'
             }}>
@@ -28,13 +28,13 @@ const Screen6_Finale = ({ onPrev }) => {
         {/* Sweet Thank You Message */}
         <div className="bg-white bg-opacity-15 backdrop-blur-sm rounded-2xl p-6 sm:p-8 md:p-10 border border-white border-opacity-30 shadow-xl animate-fade-in-up"
              style={{ animationDelay: '0.9s' }}>
-          <p className="text-lg sm:text-xl md:text-2xl text-white leading-relaxed font-light"
+          <p className="text-lg sm:text-xl md:text-2xl text-[#e32c2c] leading-relaxed font-light"
              style={{
                textShadow: '0 2px 8px rgba(0, 0, 0, 0.3)'
              }}>
-            Dear Pinaki,
+            Dear Penguuu,
           </p>
-          <p className="text-base sm:text-lg md:text-xl text-white leading-relaxed font-light mt-3 sm:mt-4"
+          <p className="text-base sm:text-lg md:text-xl text-[#e32c2c] leading-relaxed font-light mt-3 sm:mt-4"
              style={{
                textShadow: '0 2px 8px rgba(0, 0, 0, 0.3)'
              }}>
@@ -61,7 +61,7 @@ const Screen6_Finale = ({ onPrev }) => {
       <div className="absolute bottom-4 sm:bottom-8 left-4">
         <button
           onClick={onPrev}
-          className="px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-base bg-white bg-opacity-30 text-white font-bold rounded-full hover:bg-opacity-50 transition hover:scale-110 active:scale-95 transform duration-300 whitespace-nowrap"
+          className="px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-base bg-white bg-opacity-30 text-[#e32c2c] font-bold rounded-full hover:bg-opacity-50 transition hover:scale-110 active:scale-95 transform duration-300 whitespace-nowrap"
         >
           ← Back
         </button>

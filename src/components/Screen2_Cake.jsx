@@ -37,7 +37,7 @@ const Screen2_Cake = ({ onNext, onPrev }) => {
       </div>
 
       {/* Instructions */}
-      <p className="text-sm sm:text-base md:text-lg text-white mb-6 sm:mb-12 text-center"
+      <p className="text-sm sm:text-base md:text-lg text-[#dd1616] mb-6 sm:mb-12 text-center"
          style={{
            textShadow: '0 2px 8px rgba(0, 0, 0, 0.3)'
          }}>
@@ -180,7 +180,7 @@ const Screen2_Cake = ({ onNext, onPrev }) => {
       <div className="absolute bottom-4 sm:bottom-8 left-4 right-4 flex justify-between gap-2 sm:gap-4">
         <button
           onClick={onPrev}
-          className="px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-base bg-white bg-opacity-30 text-white font-bold rounded-full hover:bg-opacity-50 transition hover:scale-110 active:scale-95 transform duration-300 whitespace-nowrap"
+          className="px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-base bg-white bg-opacity-30 text-[#e32c2c] font-bold rounded-full hover:bg-opacity-50 transition hover:scale-110 active:scale-95 transform duration-300 whitespace-nowrap"
         >
           ← Back
         </button>
