@@ -190,7 +190,7 @@ const Screen2_Cake = ({ onNext, onPrev }) => {
             onClick={onNext}
             className="px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-base bg-white text-rose-dark font-bold rounded-full hover:shadow-lg transition hover:scale-110 active:scale-95 transform duration-300 whitespace-nowrap animate-fade-in"
           >
-            Next →
+            Next → 
           </button>
         )}
       </div>
