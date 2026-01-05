@@ -8,14 +8,14 @@ const Screen1_Welcome = ({ onNext }) => {
       
       <div className="text-center z-10 space-y-8 animate-fade-in max-w-full">
         {/* Main Heading */}
-        <div className="mb-6 sm:mb-8">
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-[#dd1616] mb-3 sm:mb-4"
+        <div className="mb-6">
+          <h1 className="text-5xl font-black text-[#dd1616] mb-3"
               style={{
                 textShadow: '0 6px 20px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.3)'
               }}>
             Happy Birthday!
           </h1>
-          <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-white"
+          <p className="text-3xl font-bold text-white"
              style={{
                textShadow: '0 4px 15px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.3)'
              }}>
@@ -24,7 +24,7 @@ const Screen1_Welcome = ({ onNext }) => {
         </div>
 
         {/* Decorative emojis */}
-        <div className="flex justify-center gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-12 text-3xl sm:text-4xl md:text-5xl">
+        <div className="flex justify-center gap-4 mb-8 text-3xl">
           <span className="animate-bounce-soft">🎂</span>
           <span className="animate-spin-slow">🎈</span>
           <span className="animate-bounce-soft" style={{ animationDelay: '0.5s' }}>
@@ -33,7 +33,7 @@ const Screen1_Welcome = ({ onNext }) => {
         </div>
 
         {/* Subtext */}
-        <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-[#e32c2c] mb-8 sm:mb-16 font-light"
+        <p className="text-lg text-[#e32c2c] mb-8 font-light"
            style={{
              textShadow: '0 4px 12px rgba(0, 0, 0, 0.3)'
            }}>
@@ -43,7 +43,7 @@ const Screen1_Welcome = ({ onNext }) => {
         {/* CTA Button */}
         <button
           onClick={onNext}
-          className="px-6 sm:px-8 md:px-10 py-3 sm:py-4 bg-white text-rose-dark font-bold text-base sm:text-lg md:text-xl rounded-full shadow-lg sm:shadow-xl hover:shadow-2xl hover:scale-110 transform transition-all duration-300 active:scale-95"
+          className="px-6 py-3 bg-white text-rose-dark font-bold text-base rounded-full shadow-lg hover:shadow-2xl hover:scale-110 transform transition-all duration-300 active:scale-95"
         >
           Click to Begin ✨
         </button>

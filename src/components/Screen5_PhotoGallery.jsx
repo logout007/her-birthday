@@ -31,9 +31,9 @@ const Screen5_PhotoGallery = ({ onNext, onPrev }) => {
   };
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 relative">
-      <div className="mb-4 sm:mb-6 md:mb-8 animate-fade-in-down">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#dd1616] text-center"
+    <div className="w-full h-full flex flex-col items-center justify-center p-4 relative">
+      <div className="mb-4 animate-fade-in-down">
+        <h2 className="text-3xl font-bold text-[#dd1616] text-center"
             style={{
               textShadow: '0 4px 15px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.3)'
             }}>
@@ -42,29 +42,29 @@ const Screen5_PhotoGallery = ({ onNext, onPrev }) => {
       </div>
 
       {/* Photo Carousel */}
-      <div className="relative w-full max-w-sm sm:max-w-md md:max-w-2xl aspect-video mb-6 sm:mb-8 overflow-hidden rounded-2xl shadow-2xl animate-fade-in"
+      <div className="relative w-full max-w-sm aspect-video mb-6 overflow-hidden rounded-2xl shadow-2xl animate-fade-in bg-black"
            style={{ animationDelay: '0.3s' }}>
         <img
           key={currentPhoto}
           src={photos[currentPhoto].src}
           alt={`Memory ${currentPhoto + 1}`}
-          className="w-full h-full object-cover animate-carousel-slide"
+          className="w-full h-full object-contain animate-carousel-slide"
           onError={(e) => {
             e.target.src = 'https://via.placeholder.com/600x400?text=Photo+' + (currentPhoto + 1);
           }}
         />
         
         {/* Polaroid effect border */}
-        <div className="absolute inset-0 pointer-events-none border-4 sm:border-8 border-white border-opacity-10"></div>
+        <div className="absolute inset-0 pointer-events-none border-4 border-white border-opacity-10"></div>
 
         {/* Photo Counter */}
-        <div className="absolute bottom-3 sm:bottom-4 right-3 sm:right-4 bg-white bg-opacity-30 px-3 sm:px-4 py-2 rounded-full text-white font-bold text-xs sm:text-sm backdrop-blur-sm">
+        <div className="absolute bottom-3 right-3 bg-white bg-opacity-30 px-3 py-2 rounded-full text-white font-bold text-xs backdrop-blur-sm">
           {currentPhoto + 1} / {photos.length}
         </div>
       </div>
 
       {/* Navigation Dots */}
-      <div className="flex justify-center gap-2 sm:gap-3 mb-6 sm:mb-8">
+      <div className="flex justify-center gap-2 mb-6">
         {photos.map((_, index) => (
           <button
             key={index}
@@ -75,40 +75,40 @@ const Screen5_PhotoGallery = ({ onNext, onPrev }) => {
             className={`rounded-full transition-all duration-300 hover:scale-125 active:scale-95 transform ${
               index === currentPhoto
                 ? 'bg-white w-8 h-3'
-                : 'bg-white bg-opacity-50 w-2 h-2 sm:w-3 sm:h-3 hover:bg-opacity-75'
+                : 'bg-white bg-opacity-50 w-2 h-2 hover:bg-opacity-75'
             }`}
           />
         ))}
       </div>
 
       {/* Carousel Controls */}
-      <div className="flex gap-2 sm:gap-4 mb-4 sm:mb-8 flex-wrap justify-center">
+      <div className="flex gap-2 mb-4 flex-wrap justify-center">
         <button
           onClick={prevPhoto}
-          className="px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-base bg-white bg-opacity-30 text-[#e32c2c] font-bold rounded-full hover:bg-opacity-50 backdrop-blur-sm transition hover:scale-110 active:scale-95 transform duration-300 whitespace-nowrap"
+          className="px-4 py-2 text-xs bg-white bg-opacity-30 text-[#e32c2c] font-bold rounded-full hover:bg-opacity-50 backdrop-blur-sm transition hover:scale-110 active:scale-95 transform duration-300 whitespace-nowrap"
         >
           ← Prev
         </button>
         <button
           onClick={nextPhoto}
-          className="px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-base bg-white bg-opacity-30 text-[#e32c2c] font-bold rounded-full hover:bg-opacity-50 backdrop-blur-sm transition hover:scale-110 active:scale-95 transform duration-300 whitespace-nowrap"
+          className="px-4 py-2 text-xs bg-white bg-opacity-30 text-[#e32c2c] font-bold rounded-full hover:bg-opacity-50 backdrop-blur-sm transition hover:scale-110 active:scale-95 transform duration-300 whitespace-nowrap"
         >
           Next →
         </button>
       </div>
 
       {/* Navigation Buttons */}
-      <div className="absolute bottom-4 sm:bottom-8 left-4 right-4 flex justify-between gap-2 sm:gap-4">
+      <div className="fixed bottom-6 left-4 right-4 flex justify-between gap-2 z-50">
         <button
           onClick={onPrev}
-          className="px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-base bg-white bg-opacity-30 text-[#e32c2c] font-bold rounded-full hover:bg-opacity-50 transition hover:scale-110 active:scale-95 transform duration-300 whitespace-nowrap"
+          className="px-4 py-2 text-xs bg-white bg-opacity-30 text-[#e32c2c] font-bold rounded-full hover:bg-opacity-50 transition hover:scale-110 active:scale-95 transform duration-300 whitespace-nowrap"
         >
           ← Back
         </button>
 
         <button
           onClick={onNext}
-          className="px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-base bg-white text-rose-dark font-bold rounded-full hover:shadow-lg transition hover:scale-110 active:scale-95 transform duration-300 whitespace-nowrap"
+          className="px-4 py-2 text-xs bg-white text-rose-dark font-bold rounded-full hover:shadow-lg transition hover:scale-110 active:scale-95 transform duration-300 whitespace-nowrap"
         >
           Next →
         </button>

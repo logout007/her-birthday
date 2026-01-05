@@ -26,9 +26,9 @@ const Screen2_Cake = ({ onNext, onPrev }) => {
   }, [allCandlesBlown, showCut]);
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center relative px-4 py-6 sm:py-8">
-      <div className="mb-4 sm:mb-8 animate-fade-in-down">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center"
+    <div className="w-full h-full flex flex-col items-center justify-center relative px-4 py-6">
+      <div className="mb-4 animate-fade-in-down">
+        <h2 className="text-3xl font-bold text-white text-center"
             style={{
               textShadow: '0 4px 15px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.3)'
             }}>
@@ -37,7 +37,7 @@ const Screen2_Cake = ({ onNext, onPrev }) => {
       </div>
 
       {/* Instructions */}
-      <p className="text-sm sm:text-base md:text-lg text-[#dd1616] mb-6 sm:mb-12 text-center"
+      <p className="text-sm text-[#dd1616] mb-6 text-center"
          style={{
            textShadow: '0 2px 8px rgba(0, 0, 0, 0.3)'
          }}>
@@ -52,7 +52,7 @@ const Screen2_Cake = ({ onNext, onPrev }) => {
           } ${showCut ? 'animate-cake-glow' : ''}`}
         >
           {/* Candles Container */}
-          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 flex justify-center gap-2 sm:gap-3 md:gap-4 z-20"
+          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 flex justify-center gap-2 z-20"
                style={{ marginTop: '-60px' }}>
             {candles.map((index) => (
               <div
@@ -64,7 +64,7 @@ const Screen2_Cake = ({ onNext, onPrev }) => {
                 className="relative cursor-pointer hover:scale-110 transform transition-transform"
               >
                 {/* Candle */}
-                <div className="w-6 h-12 sm:w-8 sm:h-16 bg-gradient-to-b from-yellow-300 via-yellow-400 to-yellow-500 rounded-full shadow-lg"
+                <div className="w-6 h-12 bg-gradient-to-b from-yellow-300 via-yellow-400 to-yellow-500 rounded-full shadow-lg"
                      style={{
                        boxShadow: '0 4px 10px rgba(255, 200, 0, 0.5)'
                      }} />
@@ -100,7 +100,7 @@ const Screen2_Cake = ({ onNext, onPrev }) => {
           </div>
 
           {/* Beautiful SVG Cake */}
-          <svg width="100%" height="auto" viewBox="0 0 500 400" className="drop-shadow-2xl max-w-sm sm:max-w-md md:max-w-lg">
+          <svg width="100%" height="auto" viewBox="0 0 500 400" className="drop-shadow-2xl max-w-sm">
             {/* Cake Board/Plate */}
             <ellipse cx="250" cy="350" rx="200" ry="50" fill="#E8D5B7" opacity="0.9" />
             <ellipse cx="250" cy="345" rx="200" ry="45" fill="#F5E6D3" opacity="0.8" />
@@ -159,15 +159,15 @@ const Screen2_Cake = ({ onNext, onPrev }) => {
 
       {/* Cut Animation */}
       {showCut && (
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-5xl sm:text-6xl md:text-7xl animate-bounce-soft">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-5xl animate-bounce-soft">
           🎉
         </div>
       )}
 
       {/* Celebration Message */}
       {showCut && (
-        <div className="mt-4 sm:mt-8 animate-fade-in-up text-center">
-          <p className="text-xl sm:text-2xl md:text-3xl font-bold text-white"
+        <div className="mt-4 animate-fade-in-up text-center">
+          <p className="text-xl font-bold text-white"
              style={{
                textShadow: '0 4px 12px rgba(0, 0, 0, 0.4)'
              }}>
@@ -177,10 +177,10 @@ const Screen2_Cake = ({ onNext, onPrev }) => {
       )}
 
       {/* Navigation Buttons */}
-      <div className="absolute bottom-4 sm:bottom-8 left-4 right-4 flex justify-between gap-2 sm:gap-4">
+      <div className="fixed bottom-6 left-4 right-4 flex justify-between gap-2 z-50">
         <button
           onClick={onPrev}
-          className="px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-base bg-white bg-opacity-30 text-[#e32c2c] font-bold rounded-full hover:bg-opacity-50 transition hover:scale-110 active:scale-95 transform duration-300 whitespace-nowrap"
+          className="px-4 py-2 text-xs bg-white bg-opacity-30 text-[#e32c2c] font-bold rounded-full hover:bg-opacity-50 transition hover:scale-110 active:scale-95 transform duration-300 whitespace-nowrap"
         >
           ← Back
         </button>
@@ -188,9 +188,9 @@ const Screen2_Cake = ({ onNext, onPrev }) => {
         {allCandlesBlown && showCut && (
           <button
             onClick={onNext}
-            className="px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-base bg-white text-rose-dark font-bold rounded-full hover:shadow-lg transition hover:scale-110 active:scale-95 transform duration-300 whitespace-nowrap animate-fade-in"
+            className="px-4 py-2 text-xs bg-white text-rose-dark font-bold rounded-full hover:shadow-lg transition hover:scale-110 active:scale-95 transform duration-300 whitespace-nowrap animate-fade-in"
           >
-            Next → 
+            Next →
           </button>
         )}
       </div>

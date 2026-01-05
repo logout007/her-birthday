@@ -36,7 +36,7 @@ const Decorations = () => {
       {hearts.map((heart) => (
         <div
           key={`heart-${heart.id}`}
-          className="absolute text-2xl sm:text-3xl md:text-4xl animate-float"
+          className="absolute text-2xl animate-float"
           style={{
             left: heart.position.left,
             top: heart.position.top,
@@ -51,7 +51,7 @@ const Decorations = () => {
       {stars.map((star) => (
         <div
           key={`star-${star.id}`}
-          className="absolute text-xl sm:text-2xl md:text-3xl opacity-60 animate-pulse-glow"
+          className="absolute text-xl opacity-60 animate-pulse-glow"
           style={{
             left: star.position.left,
             top: star.position.top,

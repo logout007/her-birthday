@@ -59,7 +59,7 @@ function App() {
       <div className="w-full h-full">
         {renderScreen()}
       </div>
-      <div className="absolute bottom-2 left-2 sm:bottom-4 sm:left-4 text-xs text-white opacity-30 pointer-events-none">
+      <div className="absolute bottom-2 left-2 text-xs text-white opacity-30 pointer-events-none">
         Screen {currentScreen}
       </div>
     </div>
